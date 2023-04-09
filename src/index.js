@@ -10,7 +10,6 @@ function revealNode (node) {
 function onReviewsClick (reviewNode) {
     console.log('Clicked the Reviews');
 
-    console.log(`sanifier before: ${reviewNode.dataset?.sanifier}`);
     reviewNode.dataset.sanifier ??= '{}';
 
     const sanifier = JSON.parse(reviewNode.dataset.sanifier);
@@ -20,20 +19,17 @@ function onReviewsClick (reviewNode) {
         sanifier.isHidden = false;
 
         nodes.forEach(node => {
-            console.log('Revealing node');
             revealNode(node);
         });
     } else {
         sanifier.isHidden = true;
 
         nodes.forEach(node => {
-            console.log('Hiding node');
             hideNode(node);
         });
     }
 
     reviewNode.dataset.sanifier = JSON.stringify(sanifier);
-    console.log(`sanifier after: ${reviewNode.dataset.sanifier}`);
 }
 
 function gatherReviewNodes (reviewNode) {
