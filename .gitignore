@@ -1,0 +1,12 @@
+output/*
+!output/index.user.js
+node_modules/
+docs/
+yarn-error.log
+.idea/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
