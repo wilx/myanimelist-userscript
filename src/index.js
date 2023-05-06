@@ -1,3 +1,5 @@
+import hotkeys from 'hotkeys-js';
+
 function hideNode (node) {
     node.dataset.sanifierDisplay = node.style.display;
     node.style.display = 'none';
@@ -44,17 +46,27 @@ function gatherReviewNodes (reviewNode) {
 
 async function start () {
     console.log('MyAnimeList sanifier enabled.');
+
     const reviewNodes = document.evaluate('//div[@id="content"]//div/h2[text()="Reviews"]',
         document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     const reviewNode = reviewNodes.singleNodeValue;
-    if (reviewNode === null) {
-        return;
+    if (reviewNode !== null) {
+        // Add click event handler.
+        reviewNode.addEventListener('click', () => onReviewsClick(reviewNode));
+        // Manually trigger click event handler to hide the reviews by default.
+        onReviewsClick(reviewNode);
     }
 
-    // Add click event handler.
-    reviewNode.addEventListener('click', () => onReviewsClick(reviewNode));
-    // Manually trigger click event handler to hide the reviews by default.
-    onReviewsClick(reviewNode);
+    hotkeys('ctrl+/', () => {
+        console.log('Got search request');
+        const searchInputs = document.evaluate('//input[@id="topSearchText"]',
+            document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        const searchInput = searchInputs.singleNodeValue;
+        if (searchInput !== null) {
+            searchInput.scrollTo();
+            searchInput.focus({ focusVisible: true });
+        }
+    });
 }
 
 if (GM?.info !== undefined) {
