@@ -1277,11 +1277,6 @@
   dependencies:
     "@types/node" "*"
 
-"@types/marked@^4.3.0":
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-4.3.0.tgz#5cd14a190b0a4d212781cfee7093f611ec74a111"
-  integrity sha512-zK4gSFMjgslsv5Lyvr3O1yCjgmnE4pr8jbG8qVn4QglMwtpvPCf4YT2Wma7Nk95OxUUJI8Z+kzdXohbM7mVpGw==
-
 "@types/minimatch@*":
   version "5.1.2"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-5.1.2.tgz#07508b45797cb81ec3f273011b054cd0755eddca"
@@ -1296,11 +1291,6 @@
   version "20.1.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.1.0.tgz#258805edc37c327cf706e64c6957f241ca4c4c20"
   integrity sha512-O+z53uwx64xY7D6roOi4+jApDGFg0qn6WHcxe5QeqjMaTezBO/mxdfFXIVAVVyNWKx84OmPB3L8kbVYOTeN34A==
-
-"@types/node@^18.16.3":
-  version "18.16.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.5.tgz#bf64e42719dc2e74da24709a2e1c0b50a966120a"
-  integrity sha512-seOA34WMo9KB+UA78qaJoCO20RJzZGVXQ5Sh6FWu0g/hfT44nKXnej3/tCQl7FL97idFpBhisLYCTB50S0EirA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -6639,18 +6629,16 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yarn-audit-html@^7.1.1:
-  version "7.1.1"
-  resolved "https://registry.yarnpkg.com/yarn-audit-html/-/yarn-audit-html-7.1.1.tgz#1f6bbd617eb924e3403b3d3158d7a4b7cc36d7aa"
-  integrity sha512-kIrlsHY5prKWx5+L7LH/9WcimUibM37wT5lkM4ND5oYqUmX3PnUXsouEZtPlmwLQl9s2d8b91rlD9DhkOVg2qw==
+yarn-audit-html@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/yarn-audit-html/-/yarn-audit-html-7.2.0.tgz#1e607bc979ededf9f33efec3b168339c2a742181"
+  integrity sha512-EtAP707FtvG5sZddOTaMc9gLkbMgZTKqIXtX4YPgOrO7NSISySwPvofnut4YLsccfjg+yBITrpWvE1jgRoGi5A==
   dependencies:
     commander "^10.0.0"
     ejs "~3.1.9"
     marked "^4.3.0"
   optionalDependencies:
     "@types/ejs" "^3.1.2"
-    "@types/marked" "^4.3.0"
-    "@types/node" "^18.16.3"
 
 yeoman-environment@^2.10.3, yeoman-environment@^2.9.5:
   version "2.10.3"
