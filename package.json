@@ -42,7 +42,7 @@
     "browserslist": "^4.21.9",
     "chokidar": "^3.5.3",
     "eslint": "^8.43.0",
-    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard": "^17.1.0",
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsdoc": "^45.0.0",
