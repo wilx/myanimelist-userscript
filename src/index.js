@@ -63,7 +63,7 @@ async function start () {
             document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
         const searchInput = searchInputs.singleNodeValue;
         if (searchInput !== null) {
-            searchInput.scrollTo();
+            searchInput.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
             searchInput.focus({ focusVisible: true });
         }
     });

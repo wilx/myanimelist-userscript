@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.29
+// @version     1.0.30
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -693,7 +693,11 @@ async function start() {
     const searchInputs = document.evaluate('//input[@id="topSearchText"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     const searchInput = searchInputs.singleNodeValue;
     if (searchInput !== null) {
-      searchInput.scrollTo();
+      searchInput.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+        inline: 'nearest'
+      });
       searchInput.focus({
         focusVisible: true
       });
