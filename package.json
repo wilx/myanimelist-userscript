@@ -46,7 +46,7 @@
     "eslint-import-resolver-node": "^0.3.7",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsdoc": "^46.4.3",
-    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-n": "^16.0.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "npm-audit-html": "^1.5.0",
