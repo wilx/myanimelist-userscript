@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.28
+// @version     1.0.29
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -11,6 +11,7 @@
 // @grant       GM.info
 // @namespace   https://github.com/wilx/myanimelist-userscript
 // @run-at      document-end
+// @updateURL   https://github.com/wilx/myanimelist-userscript/raw/master/output/index.user.js
 // ==/UserScript==
 
 /******/ (() => { // webpackBootstrap

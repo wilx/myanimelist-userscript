@@ -64,6 +64,7 @@ module.exports = {
                     homepage: 'https://github.com/wilx/myanimelist-userscript',
                     namespace: 'https://github.com/wilx/myanimelist-userscript',
                     downloadURL: 'https://github.com/wilx/myanimelist-userscript/raw/master/output/index.user.js',
+                    updateURL: 'https://github.com/wilx/myanimelist-userscript/raw/master/output/index.user.js',
                     match: 'https://myanimelist.net/*',
                     'run-at': 'document-end',
                     grant: ['GM.cookie', 'GM.info']
