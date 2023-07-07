@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.30
+// @version     1.0.32
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
