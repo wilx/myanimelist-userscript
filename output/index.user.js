@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.33
+// @version     1.0.35
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -22,7 +22,7 @@ var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./node_modules/hotkeys-js/dist/hotkeys.esm.js
 /**! 
- * hotkeys-js v3.11.2 
+ * hotkeys-js v3.12.0 
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
  * 
  * Copyright (c) 2023 kenny wong <wowohoo@qq.com> 
@@ -210,6 +210,26 @@ function getPressedKeyString() {
     return getKey(c) || getModifier(c) || String.fromCharCode(c);
   });
 }
+function getAllKeyCodes() {
+  var result = [];
+  Object.keys(_handlers).forEach(function (k) {
+    _handlers[k].forEach(function (_ref) {
+      var key = _ref.key,
+        scope = _ref.scope,
+        mods = _ref.mods,
+        shortcut = _ref.shortcut;
+      result.push({
+        scope: scope,
+        shortcut: shortcut,
+        mods: mods,
+        keys: key.split('+').map(function (v) {
+          return code(v);
+        })
+      });
+    });
+  });
+  return result;
+}
 
 // 表单控件控件判断 返回 Boolean
 // hotkey is effective only when filter return true
@@ -312,12 +332,12 @@ function unbind(keysInfo) {
 }
 
 // 解除绑定某个范围的快捷键
-var eachUnbind = function eachUnbind(_ref) {
-  var key = _ref.key,
-    scope = _ref.scope,
-    method = _ref.method,
-    _ref$splitKey = _ref.splitKey,
-    splitKey = _ref$splitKey === void 0 ? '+' : _ref$splitKey;
+var eachUnbind = function eachUnbind(_ref2) {
+  var key = _ref2.key,
+    scope = _ref2.scope,
+    method = _ref2.method,
+    _ref2$splitKey = _ref2.splitKey,
+    splitKey = _ref2$splitKey === void 0 ? '+' : _ref2$splitKey;
   var multipleKeys = getKeys(key);
   multipleKeys.forEach(function (originKey) {
     var unbindKeys = originKey.split(splitKey);
@@ -569,6 +589,7 @@ var _api = {
   getScope: getScope,
   deleteScope: deleteScope,
   getPressedKeyCodes: getPressedKeyCodes,
+  getAllKeyCodes: getAllKeyCodes,
   isPressed: isPressed,
   filter: filter,
   trigger: trigger,
