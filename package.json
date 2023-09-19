@@ -1,6 +1,6 @@
 {
   "name": "myanimelist-userscript",
-  "version": "1.0.35",
+  "version": "1.0.36",
   "description": "MyAnimeList improver.",
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/wilx/myanimelist-userscript",
@@ -42,7 +42,7 @@
     "babel-plugin-transform-simplify-comparison-operators": "^6.9.4",
     "browserslist": "^4.21.10",
     "chokidar": "^3.5.3",
-    "eslint": "^8.48.0",
+    "eslint": "^8.49.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-plugin-import": "^2.28.1",
