@@ -40,7 +40,7 @@
     "babel-plugin-transform-regexp-constructors": "^0.4.3",
     "babel-plugin-transform-remove-undefined": "^0.5.0",
     "babel-plugin-transform-simplify-comparison-operators": "^6.9.4",
-    "browserslist": "^4.21.10",
+    "browserslist": "^4.21.11",
     "chokidar": "^3.5.3",
     "eslint": "^8.49.0",
     "eslint-config-standard": "^17.1.0",
