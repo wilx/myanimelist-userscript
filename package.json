@@ -54,7 +54,7 @@
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
     "webpack-userscript": "^3.2.2",
-    "yarn-audit-html": "^7.3.1"
+    "yarn-audit-html": "^7.3.2"
   },
   "resolutions": {},
   "browserslist": {
