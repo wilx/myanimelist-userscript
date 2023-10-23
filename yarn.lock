@@ -6857,10 +6857,10 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-yarn-audit-html@^7.3.1:
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/yarn-audit-html/-/yarn-audit-html-7.3.1.tgz#49d2c9b4bd0b1df236770d96f4358bc72b7ca118"
-  integrity sha512-69yEJ04G8fmwDF0boVH3y5EOEMpV1++pgoASTpBjV4HnTqwtGUeu+TK7+i2xcmzOJSj/wI6vFX4EFc5dBeOQwQ==
+yarn-audit-html@^7.3.2:
+  version "7.3.2"
+  resolved "https://registry.yarnpkg.com/yarn-audit-html/-/yarn-audit-html-7.3.2.tgz#376aa13b77aae5fcb1d4ca3d43ed5a1b942454e7"
+  integrity sha512-DWj7TGdnYGmHAroCVSlHK2XHntDjCRTiLgSMand67B6UsoodZse2dz3/hiKa8XshzRCnylFlrD4ytG/xGroISw==
   dependencies:
     commander "^11.0.0"
     ejs "^3.1.9"
