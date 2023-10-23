@@ -1262,10 +1262,10 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
-"@types/arrive@^2.4.2":
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/@types/arrive/-/arrive-2.4.2.tgz#a2a3ea40eade7271374c8c2e517f6e6d9a261852"
-  integrity sha512-H1WoWNtRz8t89K8ypQrJzeIRbi4CVke7S1WJVDL6BLkZTomNRZATvghfBjeaDkXRWZBCUd3K2zzZPRHIWsOUiw==
+"@types/arrive@^2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@types/arrive/-/arrive-2.4.3.tgz#6712abe606d93087b64c7a0c1f86ee2b55c9ce05"
+  integrity sha512-Pc81Jgs5JfRfI32U/Osk+C0Uy8guNepIFM6mfmcjNoReavsTpkPtEAnJGwUlfVCvMMYVwVWFvPjiCqnPstwAVQ==
 
 "@types/cacheable-request@^6.0.1":
   version "6.0.3"
