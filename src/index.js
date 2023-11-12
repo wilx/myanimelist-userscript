@@ -35,7 +35,7 @@ function onReviewsClick (reviewNode) {
 }
 
 function gatherReviewNodes (reviewNode) {
-    const reviewNodes = document.evaluate('./../following-sibling::div[contains(concat(" ", normalize-space(@class), " "), " review-element ")]',
+    const reviewNodes = document.evaluate('./following-sibling::div[contains(concat(" ", normalize-space(@class), " "), " review-element ")]',
         reviewNode, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
     const nodes = [];
     for (let node; (node = reviewNodes.iterateNext());) {
@@ -47,7 +47,7 @@ function gatherReviewNodes (reviewNode) {
 async function start () {
     console.log('MyAnimeList sanifier enabled.');
 
-    const reviewNodes = document.evaluate('//div[@id="content"]//div/h2[text()="Reviews"]',
+    const reviewNodes = document.evaluate('//div[@id="content"]//h2[text()="Reviews"]',
         document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
     const reviewNode = reviewNodes.singleNodeValue;
     if (reviewNode !== null) {

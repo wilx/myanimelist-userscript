@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.39
+// @version     1.0.42
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -644,7 +644,7 @@ function onReviewsClick(reviewNode) {
   reviewNode.dataset.sanifier = JSON.stringify(sanifier);
 }
 function gatherReviewNodes(reviewNode) {
-  const reviewNodes = document.evaluate('./../following-sibling::div[contains(concat(" ", normalize-space(@class), " "), " review-element ")]', reviewNode, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+  const reviewNodes = document.evaluate('./following-sibling::div[contains(concat(" ", normalize-space(@class), " "), " review-element ")]', reviewNode, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
   const nodes = [];
   for (let node; node = reviewNodes.iterateNext();) {
     nodes.push(node);
@@ -653,7 +653,7 @@ function gatherReviewNodes(reviewNode) {
 }
 async function start() {
   console.log('MyAnimeList sanifier enabled.');
-  const reviewNodes = document.evaluate('//div[@id="content"]//div/h2[text()="Reviews"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+  const reviewNodes = document.evaluate('//div[@id="content"]//h2[text()="Reviews"]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
   const reviewNode = reviewNodes.singleNodeValue;
   if (reviewNode !== null) {
     // Add click event handler.
