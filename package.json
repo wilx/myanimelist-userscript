@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "core-js": "^3.33.3",
-    "hotkeys-js": "^3.12.0"
+    "hotkeys-js": "^3.12.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.0",
