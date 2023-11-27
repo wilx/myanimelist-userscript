@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.42
+// @version     1.0.43
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -22,7 +22,7 @@ var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./node_modules/hotkeys-js/dist/hotkeys.esm.js
 /**! 
- * hotkeys-js v3.12.0 
+ * hotkeys-js v3.12.2 
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
  * 
  * Copyright (c) 2023 kenny wong <wowohoo@qq.com> 
