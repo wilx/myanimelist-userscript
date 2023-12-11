@@ -1,6 +1,6 @@
 {
   "name": "myanimelist-userscript",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "description": "MyAnimeList improver.",
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/wilx/myanimelist-userscript",
@@ -24,11 +24,11 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
-    "@babel/core": "^7.23.5",
+    "@babel/core": "^7.23.6",
     "@babel/eslint-parser": "^7.23.3",
     "@babel/plugin-proposal-class-static-block": "^7.21.0",
-    "@babel/plugin-transform-runtime": "^7.23.4",
-    "@babel/preset-env": "^7.23.5",
+    "@babel/plugin-transform-runtime": "^7.23.6",
+    "@babel/preset-env": "^7.23.6",
     "@types/arrive": "^2.4.4",
     "@webpack-cli/info": "^2.0.1",
     "@webpack-cli/migrate": "^1.1.2",
