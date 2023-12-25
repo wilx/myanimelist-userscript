@@ -3818,10 +3818,10 @@ hosted-git-info@^2.1.4:
   resolved "https://registry.yarnpkg.com/hosted-git-info/-/hosted-git-info-2.8.9.tgz#dffc0bf9a21c02209090f2aa69429e1414daf3f9"
   integrity sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw==
 
-hotkeys-js@^3.13.2:
-  version "3.13.2"
-  resolved "https://registry.yarnpkg.com/hotkeys-js/-/hotkeys-js-3.13.2.tgz#9f6fe48026106fa6acb1fb10f22a4b06e160bf5a"
-  integrity sha512-SXd+x90nhOdo5s+DZNPtrvXs0ZahQLXT0tWQ68bzjxCNUZ7eV4ZlNqjHLi3Kt2URpR8EBJOB2dBLdNfwIeql1A==
+hotkeys-js@^3.13.3:
+  version "3.13.3"
+  resolved "https://registry.yarnpkg.com/hotkeys-js/-/hotkeys-js-3.13.3.tgz#b0a9f243bb1e9cacb93d3772a9e1f6013c0698a3"
+  integrity sha512-IEiMBNRJZMhWyNDsvww8LYC8vZYyj2/w2GgXPg0ljq/K3SYvOJH6NRMqzF7z2Fwaq2AzKSvmvECREzFleKSeow==
 
 http-cache-semantics@^4.0.0:
   version "4.1.1"
