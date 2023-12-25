@@ -1,6 +1,6 @@
 {
   "name": "myanimelist-userscript",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "description": "MyAnimeList improver.",
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/wilx/myanimelist-userscript",
@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "core-js": "^3.34.0",
-    "hotkeys-js": "^3.13.2"
+    "hotkeys-js": "^3.13.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",

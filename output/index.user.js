@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.44
+// @version     1.0.45
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -22,7 +22,7 @@ var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./node_modules/hotkeys-js/dist/hotkeys.esm.js
 /**! 
- * hotkeys-js v3.13.1 
+ * hotkeys-js v3.13.3 
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
  * 
  * Copyright (c) 2023 kenny wong <wowohoo@qq.com> 
@@ -519,6 +519,9 @@ function hotkeys(key, option, method) {
   }
   if (typeof option === 'string') scope = option;
 
+  // 如果只允许单个callback，先unbind
+  if (single) unbind(key, scope);
+
   // 对于每个快捷键进行处理
   for (; i < keys.length; i++) {
     key = keys[i].split(splitKey); // 按键列表
@@ -533,8 +536,6 @@ function hotkeys(key, option, method) {
 
     // 判断key是否在_handlers中，不在就赋一个空数组
     if (!(key in _handlers)) _handlers[key] = [];
-    // 如果只允许单个callback，重新设置_handlers
-    if (single) _handlers[key] = [];
     _handlers[key].push({
       keyup,
       keydown,
