@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.48
+// @version     1.0.49
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -22,7 +22,7 @@ var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./node_modules/hotkeys-js/dist/hotkeys.esm.js
 /**! 
- * hotkeys-js v3.13.5 
+ * hotkeys-js v3.13.7 
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
  * 
  * Copyright (c) 2024 kenny wong <wowohoo@qq.com> 
@@ -46,8 +46,8 @@ function addEvent(object, event, method, useCapture) {
 function removeEvent(object, event, method, useCapture) {
   if (object.removeEventListener) {
     object.removeEventListener(event, method, useCapture);
-  } else if (object.deachEvent) {
-    object.deachEvent("on".concat(event), method);
+  } else if (object.detachEvent) {
+    object.detachEvent("on".concat(event), method);
   }
 }
 
@@ -235,8 +235,9 @@ function filter(event) {
     tagName
   } = target;
   let flag = true;
+  const isInput = tagName === 'INPUT' && !['checkbox', 'radio', 'range', 'button', 'file', 'reset', 'submit', 'color'].includes(target.type);
   // ignore: isContentEditable === 'true', <input> and <textarea> when readOnly state is false, <select>
-  if (target.isContentEditable || (tagName === 'INPUT' || tagName === 'TEXTAREA' || tagName === 'SELECT') && !target.readOnly) {
+  if (target.isContentEditable || (isInput || tagName === 'TEXTAREA' || tagName === 'SELECT') && !target.readOnly) {
     flag = false;
   }
   return flag;
