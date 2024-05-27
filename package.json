@@ -23,7 +23,7 @@
     "hotkeys-js": "^3.13.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.24.1",
+    "@babel/cli": "^7.24.6",
     "@babel/core": "^7.24.4",
     "@babel/eslint-parser": "^7.24.1",
     "@babel/plugin-proposal-class-static-block": "^7.21.0",
