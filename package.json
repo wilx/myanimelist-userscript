@@ -19,7 +19,7 @@
     "firemonkey"
   ],
   "dependencies": {
-    "core-js": "^3.38.0",
+    "core-js": "^3.38.1",
     "hotkeys-js": "^3.13.6"
   },
   "devDependencies": {
