@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.67
+// @version     1.0.71
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -19,7 +19,7 @@
 
 // UNUSED EXPORTS: start
 
-;// CONCATENATED MODULE: ./node_modules/hotkeys-js/dist/hotkeys.esm.js
+;// ./node_modules/hotkeys-js/dist/hotkeys.esm.js
 /**! 
  * hotkeys-js v3.13.7 
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
@@ -696,7 +696,7 @@ if (typeof window !== 'undefined') {
 
 
 
-;// CONCATENATED MODULE: ./src/index.js
+;// ./src/index.js
 
 function hideNode(node) {
   node.dataset.sanifierDisplay = node.style.display;
