@@ -1,5 +1,7 @@
 import hotkeys from 'hotkeys-js';
 
+const evaluator = new XPathEvaluator();
+
 function hideNode (node) {
     node.dataset.sanifierDisplay = node.style.display;
     node.style.display = 'none';
@@ -34,9 +36,12 @@ function onReviewsClick (reviewNode) {
     reviewNode.dataset.sanifier = JSON.stringify(sanifier);
 }
 
+const reviewElementsXpath = evaluator.createExpression(
+    './following-sibling::div[contains(concat(" ", normalize-space(@class), " "), " review-element ")]');
+
 function gatherReviewNodes (reviewNode) {
-    const reviewNodes = document.evaluate('./following-sibling::div[contains(concat(" ", normalize-space(@class), " "), " review-element ")]',
-        reviewNode, null, XPathResult.ORDERED_NODE_ITERATOR_TYPE, null);
+    const reviewNodes = reviewElementsXpath.evaluate(reviewNode,
+        XPathResult.ORDERED_NODE_ITERATOR_TYPE);
     const nodes = [];
     for (let node; (node = reviewNodes.iterateNext());) {
         nodes.push(node);
@@ -44,11 +49,14 @@ function gatherReviewNodes (reviewNode) {
     return nodes;
 }
 
+const reviewsH2Xpath = evaluator.createExpression('//div[@id="content"]//h2[text()="Reviews"]');
+const topSearchXpath = evaluator.createExpression('//input[@id="topSearchText"]');
+
 async function start () {
     console.log('MyAnimeList sanifier enabled.');
 
-    const reviewNodes = document.evaluate('//div[@id="content"]//h2[text()="Reviews"]',
-        document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+    const reviewNodes = reviewsH2Xpath.evaluate(document,
+        XPathResult.FIRST_ORDERED_NODE_TYPE);
     const reviewNode = reviewNodes.singleNodeValue;
     if (reviewNode !== null) {
         // Add click event handler.
@@ -59,8 +67,8 @@ async function start () {
 
     hotkeys('ctrl+/', () => {
         console.log('Got search request');
-        const searchInputs = document.evaluate('//input[@id="topSearchText"]',
-            document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+        const searchInputs = topSearchXpath.evaluate(document,
+            XPathResult.FIRST_ORDERED_NODE_TYPE);
         const searchInput = searchInputs.singleNodeValue;
         if (searchInput !== null) {
             searchInput.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
