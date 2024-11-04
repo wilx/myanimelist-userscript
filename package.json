@@ -50,7 +50,7 @@
     "eslint-plugin-promise": "^7.1.0",
     "globals": "^15.11.0",
     "npm-audit-html": "^1.5.0",
-    "webpack": "^5.95.0",
+    "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
     "webpack-userscript": "^3.2.2",
     "yarn-audit-html": "^7.3.2"
