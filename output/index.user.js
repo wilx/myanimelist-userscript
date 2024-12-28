@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.82
+// @version     1.0.92
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -734,6 +734,7 @@ function gatherReviewNodes(reviewNode) {
 }
 const reviewsH2Xpath = evaluator.createExpression('//div[@id="content"]//h2[text()="Reviews"]');
 const topSearchXpath = evaluator.createExpression('//input[@id="topSearchText"]');
+const animeListLinkXpath = evaluator.createExpression('//div[contains(concat(" ", normalize-space(@class), " "), " header-menu-dropdown ")]/ul/li/a[text()="Anime List"]');
 async function start() {
   console.log('MyAnimeList sanifier enabled.');
   const reviewNodes = reviewsH2Xpath.evaluate(document, XPathResult.FIRST_ORDERED_NODE_TYPE);
@@ -759,8 +760,19 @@ async function start() {
       });
     }
   });
+  hotkeys('l', () => {
+    const linkNode = animeListLinkXpath.evaluate(document, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue;
+    if (linkNode != null) {
+      // Get the link and navigate to it.
+      const link = linkNode?.attributes?.href?.value;
+      console.log(`link: ${link}`);
+      if (link != null) {
+        document.location.href = link;
+      }
+    }
+  });
 }
-if (GM?.info !== undefined) {
+if (GM?.info != null) {
   start();
 }
 
