@@ -1,4 +1,4 @@
-import { bindKey, bindKeyCombo } from '@rwh/keystrokes';
+import hotkeys from 'hotkeys-js';
 
 const evaluator = new XPathEvaluator();
 
@@ -66,7 +66,7 @@ async function start () {
         onReviewsClick(reviewNode);
     }
 
-    bindKeyCombo('ctrl+/', () => {
+    hotkeys('ctrl+/', () => {
         console.log('Got search request');
         const searchInputs = topSearchXpath.evaluate(document,
             XPathResult.FIRST_ORDERED_NODE_TYPE);
@@ -77,7 +77,7 @@ async function start () {
         }
     });
 
-    bindKey('l', () => {
+    hotkeys('l', () => {
         const linkNode = animeListLinkXpath.evaluate(document, XPathResult.FIRST_ORDERED_NODE_TYPE).singleNodeValue;
         if (linkNode != null) {
             // Get the link and navigate to it.
