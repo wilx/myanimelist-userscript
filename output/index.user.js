@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.107
+// @version     1.0.108
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -21,10 +21,10 @@
 
 ;// ./node_modules/hotkeys-js/dist/hotkeys.esm.js
 /**! 
- * hotkeys-js v3.13.9 
+ * hotkeys-js v3.13.10 
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
  * 
- * Copyright (c) 2024 kenny wong <wowohoo@qq.com> 
+ * Copyright (c) 2025 kenny wong <wowohoo@qq.com> 
  * https://github.com/jaywcjlove/hotkeys-js.git 
  * 
  * @website: https://jaywcjlove.github.io/hotkeys-js
@@ -442,13 +442,14 @@ function dispatch(event, element) {
   /**
    * -------------------------------
    */
-
   if (key in _mods) {
     _mods[key] = true;
-
     // 将特殊字符的key注册到 hotkeys 上
     for (const k in _modifier) {
-      if (_modifier[k] === key) hotkeys[k] = true;
+      if (Object.prototype.hasOwnProperty.call(_modifier, k)) {
+        const eventKey = modifierMap[_modifier[k]];
+        hotkeys[k] = event[eventKey];
+      }
     }
     if (!asterisk) return;
   }
