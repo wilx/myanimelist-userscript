@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.108
+// @version     1.0.109
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -21,7 +21,7 @@
 
 ;// ./node_modules/hotkeys-js/dist/hotkeys.esm.js
 /**! 
- * hotkeys-js v3.13.10 
+ * hotkeys-js v3.13.14 
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies. 
  * 
  * Copyright (c) 2025 kenny wong <wowohoo@qq.com> 
@@ -100,6 +100,11 @@ const _keyMap = {
   up: 38,
   right: 39,
   down: 40,
+  /// https://w3c.github.io/uievents/#events-keyboard-key-location
+  arrowup: 38,
+  arrowdown: 40,
+  arrowleft: 37,
+  arrowright: 39,
   del: 46,
   delete: 46,
   ins: 45,
@@ -134,6 +139,8 @@ const _keyMap = {
   '=': isff ? 61 : 187,
   ';': isff ? 59 : 186,
   '\'': 222,
+  '{': 219,
+  '}': 221,
   '[': 219,
   ']': 221,
   '\\': 220
@@ -155,6 +162,7 @@ const _modifier = {
   // metaKey
   '⌘': 91,
   cmd: 91,
+  meta: 91,
   command: 91
 };
 const modifierMap = {
@@ -283,6 +291,13 @@ function deleteScope(scope, newScope) {
 // 清除修饰键
 function clearModifier(event) {
   let key = event.keyCode || event.which || event.charCode;
+  if (event.key && event.key.toLowerCase() === 'capslock') {
+    // Ensure that when capturing keystrokes in modern browsers,
+    // uppercase and lowercase letters (such as R and r) return the same key value.
+    // https://github.com/jaywcjlove/hotkeys-js/pull/514
+    // https://developer.mozilla.org/zh-CN/docs/Web/API/KeyboardEvent/key
+    key = code(event.key);
+  }
   const i = _downKeys.indexOf(key);
 
   // 从列表中清除按压过的键
@@ -405,7 +420,15 @@ function eventHandler(event, handler, scope, element) {
 function dispatch(event, element) {
   const asterisk = _handlers['*'];
   let key = event.keyCode || event.which || event.charCode;
-
+  // Ensure that when capturing keystrokes in modern browsers,
+  // uppercase and lowercase letters (such as R and r) return the same key value.
+  // https://github.com/jaywcjlove/hotkeys-js/pull/514
+  // https://developer.mozilla.org/zh-CN/docs/Web/API/KeyboardEvent/key
+  // CapsLock key
+  // There's an issue where `keydown` and `keyup` events are not triggered after CapsLock is enabled to activate uppercase.
+  if (event.key && event.key.toLowerCase() === 'capslock') {
+    return;
+  }
   // 表单控件过滤 默认表单控件不触发快捷键
   if (!hotkeys.filter.call(this, event)) return;
 
