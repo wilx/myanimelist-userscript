@@ -2198,6 +2198,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sindresorhus/base62@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@sindresorhus/base62@npm:0.1.0"
+  checksum: 10c0/395d48bbe6b1adc3b0f7b630237f10e61be5807904b89d0faf93c3314a820ffbe674fc092eda48a81b44f966d1f7d0ca24d6e512fa6479eeb03f155fef25d042
+  languageName: node
+  linkType: hard
+
 "@sindresorhus/is@npm:^0.14.0":
   version: 0.14.0
   resolution: "@sindresorhus/is@npm:0.14.0"
@@ -4602,9 +4609,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jsdoc@npm:^61.1.1":
-  version: 61.1.1
-  resolution: "eslint-plugin-jsdoc@npm:61.1.1"
+"eslint-plugin-jsdoc@npm:^61.1.4":
+  version: 61.1.4
+  resolution: "eslint-plugin-jsdoc@npm:61.1.4"
   dependencies:
     "@es-joy/jsdoccomment": "npm:~0.76.0"
     are-docs-informative: "npm:^0.0.2"
@@ -4618,9 +4625,10 @@ __metadata:
     parse-imports-exports: "npm:^0.2.4"
     semver: "npm:^7.7.3"
     spdx-expression-parse: "npm:^4.0.0"
+    to-valid-identifier: "npm:^0.1.1"
   peerDependencies:
     eslint: ^7.0.0 || ^8.0.0 || ^9.0.0
-  checksum: 10c0/b3a872e5b05b8b60c8d397e0535444c1905e37cfff18ddb43c4b87a53f645f4bd6b0a12dfb58ea53cdc2b806821c0255f95e39e5de7254331ca7b8d30ca262ed
+  checksum: 10c0/9a08ad6518a77947e0b41c592c658a7f95af9765fd2034ed14d844c3b366a4467da962aeff276ed1415313f78cee885955aa40cbcf43cbe92db113bbbf3d55b2
   languageName: node
   linkType: hard
 
@@ -7554,7 +7562,7 @@ __metadata:
     eslint-config-standard: "npm:^17.1.0"
     eslint-import-resolver-node: "npm:^0.3.9"
     eslint-plugin-import: "npm:^2.32.0"
-    eslint-plugin-jsdoc: "npm:^61.1.1"
+    eslint-plugin-jsdoc: "npm:^61.1.4"
     eslint-plugin-n: "npm:^17.23.1"
     eslint-plugin-node: "npm:^11.1.0"
     eslint-plugin-promise: "npm:^7.2.1"
@@ -8655,6 +8663,13 @@ __metadata:
   version: 2.0.2
   resolution: "require-from-string@npm:2.0.2"
   checksum: 10c0/aaa267e0c5b022fc5fd4eef49d8285086b15f2a1c54b28240fdf03599cbd9c26049fee3eab894f2e1f6ca65e513b030a7c264201e3f005601e80c49fb2937ce2
+  languageName: node
+  linkType: hard
+
+"reserved-identifiers@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "reserved-identifiers@npm:1.0.0"
+  checksum: 10c0/e6aa8e3b6c0c2d29e40c4597c0d202911c91b67f875da396340c2213ee7a8924476da54a5a0855c5acb409a9bc9aa84dacfdaa145528883746cbad74666189e9
   languageName: node
   linkType: hard
 
@@ -9831,6 +9846,16 @@ __metadata:
     regex-not: "npm:^1.0.2"
     safe-regex: "npm:^1.1.0"
   checksum: 10c0/99d0b8ef397b3f7abed4bac757b0f0bb9f52bfd39167eb7105b144becfaa9a03756892352d01ac6a911f0c1ceef9f81db68c46899521a3eed054082042796120
+  languageName: node
+  linkType: hard
+
+"to-valid-identifier@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "to-valid-identifier@npm:0.1.1"
+  dependencies:
+    "@sindresorhus/base62": "npm:^0.1.0"
+    reserved-identifiers: "npm:^1.0.0"
+  checksum: 10c0/39d337822478812d4cf6142cd33368710b62c33e5c0dbf8a2e75464a38f843b72e7f67a79caaefafc91311453eeab1b9583e41bc509384345a7ff90aac2538e2
   languageName: node
   linkType: hard
 
