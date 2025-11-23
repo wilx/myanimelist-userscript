@@ -1,6 +1,6 @@
 {
   "name": "myanimelist-userscript",
-  "version": "1.0.116",
+  "version": "1.0.117",
   "description": "MyAnimeList improver.",
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/wilx/myanimelist-userscript",
@@ -20,7 +20,7 @@
   ],
   "dependencies": {
     "core-js": "^3.47.0",
-    "hotkeys-js": "^4.0.0-beta.6"
+    "hotkeys-js": "^4.0.0-beta.7"
   },
   "devDependencies": {
     "@babel/cli": "^7.28.3",
@@ -44,7 +44,7 @@
     "eslint-config-standard": "^17.1.0",
     "eslint-import-resolver-node": "^0.3.9",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jsdoc": "^61.2.1",
+    "eslint-plugin-jsdoc": "^61.4.1",
     "eslint-plugin-n": "^17.23.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^7.2.1",
