@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.123
+// @version     1.0.124
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -21,7 +21,7 @@
 
 ;// ./node_modules/hotkeys-js/dist/hotkeys-js.js
 /*!
- * hotkeys-js v4.0.2
+ * hotkeys-js v4.0.3
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies.
  * 
  * @author kenny wong <wowohoo@qq.com>
@@ -585,10 +585,6 @@ if (typeof window !== "undefined") {
     return hotkeys;
   };
   window.hotkeys = hotkeys;
-}
-if (typeof module !== "undefined" && module.exports) {
-  module.exports = hotkeys;
-  module.exports.default = hotkeys;
 }
 
 //# sourceMappingURL=hotkeys-js.js.map
