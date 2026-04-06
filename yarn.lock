@@ -5920,10 +5920,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hotkeys-js@npm:^4.0.2":
-  version: 4.0.2
-  resolution: "hotkeys-js@npm:4.0.2"
-  checksum: 10c0/0ecd64b9e2ed489878a980bd1a3700ab3424b68c3d9b5a422be9aae69c8c930553a1b66f6731ab9efcf73ba0b06baf2ff87aa8e4e0f84ff6f810fb2a731ff9c6
+"hotkeys-js@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "hotkeys-js@npm:4.0.3"
+  checksum: 10c0/3239bd464dd7f2e10a20cf50e15f83d5db45d37084db22cd98148986155ed0089ffa7665b80a3254aca51651b055f1951d3b9e740a096e4671b752962d8d969b
   languageName: node
   linkType: hard
 
@@ -7572,7 +7572,7 @@ __metadata:
     eslint-plugin-node: "npm:^11.1.0"
     eslint-plugin-promise: "npm:^7.2.1"
     globals: "npm:^17.4.0"
-    hotkeys-js: "npm:^4.0.2"
+    hotkeys-js: "npm:^4.0.3"
     npm-audit-html: "npm:^1.5.0"
     webpack: "npm:^5.105.4"
     webpack-cli: "npm:^7.0.2"
