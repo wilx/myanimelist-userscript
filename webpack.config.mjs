@@ -1,7 +1,11 @@
-const path = require('path');
-const us = require('webpack-userscript');
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import us from 'webpack-userscript';
 
-module.exports = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export default {
     mode: 'production',
     entry: {
         'myanimelist-userscript': path.join(__dirname, 'src', 'index.js')
