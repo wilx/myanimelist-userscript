@@ -39,14 +39,19 @@ function onReviewsClick (reviewNode) {
 const reviewElementsXpath = evaluator.createExpression(
     './following-sibling::div[contains(concat(" ", normalize-space(@class), " "), " review-element ")]');
 
-function gatherReviewNodes (reviewNode) {
-    const reviewNodes = reviewElementsXpath.evaluate(reviewNode,
-        XPathResult.ORDERED_NODE_ITERATOR_TYPE);
-    const nodes = [];
-    for (let node; (node = reviewNodes.iterateNext());) {
-        nodes.push(node);
+function* xpathNodes (expression, contextNode, resultType) {
+    const result = expression.evaluate(contextNode, resultType);
+    for (let node; (node = result.iterateNext()) !== null;) {
+        yield node;
     }
-    return nodes;
+}
+
+function gatherReviewNodes (reviewNode) {
+    return Iterator.from(xpathNodes(
+        reviewElementsXpath,
+        reviewNode,
+        XPathResult.ORDERED_NODE_ITERATOR_TYPE
+    )).toArray();
 }
 
 const reviewsH2Xpath = evaluator.createExpression('//div[@id="content"]//h2[text()="Reviews"]');
@@ -90,7 +95,7 @@ async function start () {
     });
 }
 
-if (GM?.info != null) {
+if (globalThis.GM?.info != null) {
     start();
 }
 
