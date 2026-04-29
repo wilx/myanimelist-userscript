@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.129
+// @version     1.0.130
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -589,7 +589,7 @@ if (typeof window !== "undefined") {
 
 //# sourceMappingURL=hotkeys-js.js.map
 
-;// ./src/index.js
+;// ./src/index.mjs
 
 const evaluator = new XPathEvaluator();
 function hideNode(node) {

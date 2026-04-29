@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 export default {
     mode: 'production',
     entry: {
-        'myanimelist-userscript': path.join(__dirname, 'src', 'index.js')
+        'myanimelist-userscript': path.join(__dirname, 'src', 'index.mjs')
     },
     output: {
         path: path.resolve(__dirname, 'output'),
