@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        myanimelist-userscript
 // @description MyAnimeList improver.
-// @version     1.0.134
+// @version     1.0.135
 // @author      wilx
 // @homepage    https://github.com/wilx/myanimelist-userscript
 // @supportURL  https://github.com/wilx/myanimelist-userscript/issues
@@ -21,7 +21,7 @@
 
 ;// ./node_modules/hotkeys-js/dist/hotkeys-js.js
 /*!
- * hotkeys-js v4.0.3
+ * hotkeys-js v4.0.4
  * A simple micro-library for defining and dispatching keyboard shortcuts. It has no dependencies.
  * 
  * @author kenny wong <wowohoo@qq.com>
@@ -75,6 +75,9 @@ function compareArray(a1, a2) {
 }
 function getLayoutIndependentKeyCode(event) {
   let key = event.keyCode || event.which || event.charCode;
+  if (event.key && /^[a-z]$/i.test(event.key)) {
+    return event.key.toUpperCase().charCodeAt(0);
+  }
   if (event.code && /^Key[A-Z]$/.test(event.code)) {
     key = event.code.charCodeAt(3);
   }
