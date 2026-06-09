@@ -49,7 +49,6 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^7.3.0",
     "globals": "^17.6.0",
-    "npm-audit-html": "^1.5.0",
     "webpack": "^5.107.2",
     "webpack-cli": "^7.0.3",
     "webpack-userscript": "^3.2.3",
