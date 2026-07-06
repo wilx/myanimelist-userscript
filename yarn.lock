@@ -6627,6 +6627,7 @@ __metadata:
     eslint-plugin-promise: "npm:^7.3.0"
     globals: "npm:^17.7.0"
     hotkeys-js: "npm:^4.0.4"
+    minimizer-webpack-plugin: "npm:^5.6.1"
     webpack: "npm:^5.108.4"
     webpack-cli: "npm:^7.2.1"
     webpack-userscript: "npm:^3.2.3"

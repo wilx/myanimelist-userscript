@@ -1,5 +1,6 @@
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import MinimizerPlugin from 'minimizer-webpack-plugin';
 import us from 'webpack-userscript';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -55,7 +56,20 @@ export default {
     },
     devtool: 'source-map',
     optimization: {
-        minimize: false,
+        minimize: true,
+        minimizer: [
+            new MinimizerPlugin({
+                minimizerOptions: {
+                    compress: true,
+                    mangle: false,
+                    format: {
+                        beautify: true,
+                        comments: false
+                    }
+                },
+                extractComments: false
+            })
+        ],
         usedExports: true
     },
     plugins: [
