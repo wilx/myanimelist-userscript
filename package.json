@@ -1,6 +1,6 @@
 {
   "name": "myanimelist-userscript",
-  "version": "1.0.140",
+  "version": "1.0.142",
   "description": "MyAnimeList improver.",
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/wilx/myanimelist-userscript",
@@ -67,5 +67,5 @@
     "audit-html": "yarn npm audit -R --environment production"
   },
   "babel": {},
-  "packageManager": "yarn@4.16.0"
+  "packageManager": "yarn@4.17.0"
 }
