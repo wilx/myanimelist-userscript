@@ -51,7 +51,7 @@
     "eslint-plugin-promise": "^7.3.0",
     "globals": "^17.7.0",
     "minimizer-webpack-plugin": "^5.6.1",
-    "webpack": "^5.109.0",
+    "webpack": "^5.109.2",
     "webpack-cli": "^7.2.1",
     "webpack-userscript": "^3.2.3",
     "yarn-audit-html": "^7.3.2"
