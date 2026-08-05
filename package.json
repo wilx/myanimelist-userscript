@@ -1,6 +1,6 @@
 {
   "name": "myanimelist-userscript",
-  "version": "1.0.145",
+  "version": "1.0.147",
   "description": "MyAnimeList improver.",
   "license": "BSD-2-Clause",
   "homepage": "https://github.com/wilx/myanimelist-userscript",
@@ -42,17 +42,17 @@
     "babel-plugin-transform-remove-undefined": "^0.5.0",
     "babel-plugin-transform-simplify-comparison-operators": "^6.9.4",
     "browserslist": "^4.28.7",
-    "eslint": "^10.7.0",
+    "eslint": "^10.8.0",
     "eslint-import-resolver-node": "^0.4.0",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jsdoc": "^63.2.2",
+    "eslint-plugin-jsdoc": "^63.3.3",
     "eslint-plugin-n": "^18.2.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^7.3.0",
-    "globals": "^17.7.0",
+    "globals": "^17.9.0",
     "minimizer-webpack-plugin": "^5.6.1",
-    "webpack": "^5.109.0",
-    "webpack-cli": "^7.2.1",
+    "webpack": "^5.109.2",
+    "webpack-cli": "^7.2.2",
     "webpack-userscript": "^3.2.3",
     "yarn-audit-html": "^7.3.2"
   },
@@ -67,5 +67,5 @@
     "audit-html": "yarn npm audit -R --environment production"
   },
   "babel": {},
-  "packageManager": "yarn@4.17.1"
+  "packageManager": "yarn@4.18.0"
 }
