@@ -95,8 +95,11 @@ async function start () {
     });
 }
 
-if (globalThis.GM?.info != null) {
+// FireMonkey 3.x exposes GM as a class binding, which does not create a globalThis property.
+if (typeof GM !== 'undefined' && GM?.info !== undefined) {
     start();
+} else {
+    console.warn('MyAnimeList sanifier startup skipped: GM or GM.info is unavailable.');
 }
 
 export {
